@@ -18,12 +18,14 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  # For changes app icon
+  icons_launcher: ^2.1.6
 
 flutter:
   uses-material-design: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
