@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ai_assistant/helper/global.dart';
 import 'package:ai_assistant/model/onboard.dart';
 import 'package:ai_assistant/screen/home_screen.dart';

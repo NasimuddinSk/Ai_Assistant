@@ -1,10 +1,19 @@
-import 'package:ai_assistant/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:hive/hive.dart';
+
+import 'helper/global.dart';
+import 'helper/pref.dart';
+import 'screen/splash_screen.dart';
 
 Future<void> main() async {
-  // For Full Screen
   WidgetsFlutterBinding.ensureInitialized();
+  // For initializing hive to use app directory
+
+  Pref.initialize();
+
+  // For Full Screen
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   // For Urientions
   await SystemChrome.setPreferredOrientations(
@@ -18,7 +27,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
+      title: appName,
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
